@@ -142,4 +142,4 @@ if __name__ == "__main__":
     client = KalshiClient()
     data = client.get_markets(status="open", limit=5)
     for m in data.get("markets", []):
-        print(f"{m['ticker']:30s} YES bid/ask: {m['yes_bid']}/{m['yes_ask']}  vol: {m['volume']}")
+        print(f"{m['ticker']:30s} YES bid/ask: {m['yes_bid_dollars']}/{m['yes_ask_dollars']}  vol: {m['volume_fp']}")
